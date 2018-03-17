@@ -11,6 +11,8 @@ import tornado.escape
 import base64
 import requests
 from send import send
+import utility
+from io import BytesIO
 
 define("port", default=8080, help="runs on the given port", type=int)
 
@@ -63,30 +65,30 @@ class MLHandler(tornado.web.RequestHandler):
 
     @coroutine
     def post(self):
-        file_body = self.request.files['filefieldname'][0]['body']
-        ml_response = False
+        file_body = self.request.files['pic'][0]['body']
+        # gps = self.request.body.rstrip().decode('windows-1252')
+        ml_response = utility.predict.predict(BytesIO(file_body))
         details = {}
-        if send(details=details) != 201:
-            self.write(json.dumps({"status": "something went wrong"}))
+        # if int(send(details=details)) != 201:
+        #     self.write(json.dumps({"status": "something went wrong"}))
+        #
+        # if not ml_response:
+        #     if int(send()) != 201:
+        #         self.write(json.dumps({"status": "something went wrong"}))
 
-        if not ml_response:
-            if send() != 201:
-                self.write(json.dumps({"status": "something went wrong"}))
-                
-        self.write(json.dumps({"status": "success"}))
+        self.write(json.dumps({'data2': str(file_body)}))
 
 
 if __name__ == "__main__":
     options.parse_command_line()
-    client = motor_tornado.MotorClient("mongodb://"+os.environ['tornado_user']+":"+ os.environ['tornado_pass']
-                                       +"@ds117605.mlab.com:17605/tornado")
+    # client = motor_tornado.MotorClient("mongodb://"+os.environ['tornado_user']+":"+ os.environ['tornado_pass']+"@ds117605.mlab.com:17605/tornado")
     app = tornado.web.Application(
         handlers=[
             (r"/mlpredict", MLHandler)
         ],
         default_handler_class = my404handler,
-        debug=True,
-        db_client=client
+        debug=True
+        # db_client=client
     )
     http_server = tornado.httpserver.HTTPServer(app)
     http_server.listen(os.environ.get("PORT", options.port))
