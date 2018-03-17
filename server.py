@@ -11,8 +11,9 @@ import tornado.escape
 import base64
 import requests
 from send import send
-# import utility
+import utility
 from io import BytesIO
+from PIL import Image
 
 
 define("port", default=8080, help="runs on the given port", type=int)
@@ -69,7 +70,11 @@ class MLHandler(tornado.web.RequestHandler):
 
         file_body = self.request.files['pic'][0]['body']
         gps = self.get_body_argument("gps")
-        # ml_response = utility.predict.predict(BytesIO(file_body))
+        img = Image.open(BytesIO(file_body))
+        img.save("current.jpg")
+        ml_response = None
+        with open("current.jpg") as f:
+            ml_response = utility.predict.predict(f)
 
         details = {}
         # if int(send(details=details)) != 201:
