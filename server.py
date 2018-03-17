@@ -14,6 +14,7 @@ from send import send
 import utility
 from io import BytesIO
 
+
 define("port", default=8080, help="runs on the given port", type=int)
 
 
@@ -65,9 +66,11 @@ class MLHandler(tornado.web.RequestHandler):
 
     @coroutine
     def post(self):
+
         file_body = self.request.files['pic'][0]['body']
         # gps = self.request.body.rstrip().decode('windows-1252')
         ml_response = utility.predict.predict(BytesIO(file_body))
+
         details = {}
         # if int(send(details=details)) != 201:
         #     self.write(json.dumps({"status": "something went wrong"}))
@@ -84,7 +87,7 @@ if __name__ == "__main__":
     # client = motor_tornado.MotorClient("mongodb://"+os.environ['tornado_user']+":"+ os.environ['tornado_pass']+"@ds117605.mlab.com:17605/tornado")
     app = tornado.web.Application(
         handlers=[
-            (r"/mlpredict", MLHandler)
+            (r"/mlpredict", MLHandler),
         ],
         default_handler_class = my404handler,
         debug=True
