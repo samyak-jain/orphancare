@@ -68,6 +68,7 @@ class MLHandler(tornado.web.RequestHandler):
     def post(self):
 
         file_body = self.request.files['pic'][0]['body']
+        print(self.request.body)
         # gps = self.request.body.rstrip().decode('windows-1252')
         ml_response = utility.predict.predict(BytesIO(file_body))
 
