@@ -21,7 +21,7 @@ import numpy as np
 from PIL import Image
 
 
-define("port", default=9000, help="runs on the given port", type=int)
+define("port", default=8000, help="runs on the given port", type=int)
 
 
 class MyAppException(tornado.web.HTTPError):
