@@ -11,7 +11,7 @@ import tornado.escape
 import base64
 import requests
 from send import send
-import utility
+# import utility
 from io import BytesIO
 
 
@@ -68,9 +68,8 @@ class MLHandler(tornado.web.RequestHandler):
     def post(self):
 
         file_body = self.request.files['pic'][0]['body']
-        print(self.request.body)
-        # gps = self.request.body.rstrip().decode('windows-1252')
-        ml_response = utility.predict.predict(BytesIO(file_body))
+        gps = self.get_body_argument("gps")
+        # ml_response = utility.predict.predict(BytesIO(file_body))
 
         details = {}
         # if int(send(details=details)) != 201:
