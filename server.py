@@ -14,6 +14,8 @@ from utility import predict
 from io import BytesIO
 from google.cloud import firestore
 import base64
+# import firebase_admin
+# from firebase_admin import credentials
 
 import numpy as np
 from PIL import Image
@@ -71,15 +73,17 @@ class MLHandler(BaseHandler):
     @coroutine
     def post(self):
         file_body = self.request.files['pic'][0]['body']
-        img = np.array(Image.open(BytesIO(file_body))).astype('uint8')
-
-        gp = self.get_body_argument("gps")
-        ml_response = yield predict.predict(img)
-        print(ml_response)
         img = Image.open(BytesIO(file_body))
         img.save("current.jpg")
-        with open("current.jpg") as f:
-            ml_response = utility.predict.predict(f)
+        img = np.array(img).astype('uint8')
+        ml_response = yield predict.predict(img)
+
+
+        gp = self.get_body_argument("gps")
+        print(ml_response)
+
+
+
 
         # db = self.db()
         # details = yield db.find_one({"District": "Vellore"})
@@ -89,14 +93,13 @@ class MLHandler(BaseHandler):
         # if not ml_response:
         #     if int(send()) != 201:
         #         self.write(json.dumps({"status": "something went wrong"}))
-
         fire = firestore.Client()
         x = fire.collection("data").document("1")
         with open("current.jpg", "rb") as f:
             ig = base64.b64encode(f.read())
             payload = {
                 "gps": gp,
-                "label": ml_response.img_label,
+                "label": ml_response['img_label'],
                 "img": ig
             }
             y = x.get().to_dict()['data']
