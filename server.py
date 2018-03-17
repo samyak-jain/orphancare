@@ -7,17 +7,10 @@ import tornado.web
 from motor import motor_tornado
 from tornado.gen import coroutine
 from tornado.options import define, options
-from models import users, patient
-from passlib.hash import pbkdf2_sha256
 import tornado.escape
-import jwt
-from functools import wraps
-from oauth2client import client as auth_client
-from oauth2client import crypt
-from io import BytesIO
-from PIL import Image
 import base64
 import requests
+from send import send
 
 define("port", default=8080, help="runs on the given port", type=int)
 
@@ -71,13 +64,16 @@ class MLHandler(tornado.web.RequestHandler):
     @coroutine
     def post(self):
         file_body = self.request.files['filefieldname'][0]['body']
-        img = Image.open(BytesIO(file_body))
-        img.save("current.jpg")
-        f = open("current.jpg", "rb")
-        images = [{'content': base64.b64encode(f.read()).decode('UTF-8')}]
-        x = requests.post("https://skindoc-10ef5.appspot.com/melanoma/predict", json=images)
-        f.close()
-        self.write(json.dumps(x.json()[0]))
+        ml_response = False
+        details = {}
+        if send(details=details) != 201:
+            self.write(json.dumps({"status": "something went wrong"}))
+
+        if not ml_response:
+            if send() != 201:
+                self.write(json.dumps({"status": "something went wrong"}))
+                
+        self.write(json.dumps({"status": "success"}))
 
 
 if __name__ == "__main__":
@@ -89,14 +85,8 @@ if __name__ == "__main__":
             (r"/mlpredict", MLHandler)
         ],
         default_handler_class = my404handler,
-        debug = True,
-        cookie_secret = os.environ['cookie_secret'],
-        login_url = "/login",
-        db_client = client,
-        ap_details = dict(),
-        client_id = os.environ['sk_client'],
-        template_path=os.path.join(os.path.dirname(__file__), "template"),
-        static_path=os.path.join(os.path.dirname(__file__), "static"),
+        debug=True,
+        db_client=client
     )
     http_server = tornado.httpserver.HTTPServer(app)
     http_server.listen(os.environ.get("PORT", options.port))
