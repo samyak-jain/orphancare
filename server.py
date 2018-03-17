@@ -94,7 +94,11 @@ class MLHandler(BaseHandler):
         x = fire.collection("data").document("1")
         with open("current.jpg", "rb") as f:
             ig = base64.b64encode(f.read())
-            payload = f'{"gps": {gp}, "label": {ml_response.img_label}, "img": {ig}}'
+            payload = {
+                "gps": gp,
+                "label": ml_response.img_label,
+                "img": ig
+            }
             y = x.get().to_dict()['data']
             y.append(payload)
             x.set({"data": y})
