@@ -11,12 +11,17 @@ import tornado.escape
 import base64
 import requests
 from send import send
-import utility
+from utility import predict
 from io import BytesIO
+import face_recognition
+
+import base64
+
+import numpy as np
 from PIL import Image
 
 
-define("port", default=8080, help="runs on the given port", type=int)
+define("port", default=9000, help="runs on the given port", type=int)
 
 
 class MyAppException(tornado.web.HTTPError):
@@ -67,16 +72,15 @@ class MLHandler(tornado.web.RequestHandler):
 
     @coroutine
     def post(self):
-
         file_body = self.request.files['pic'][0]['body']
-        gps = self.get_body_argument("gps")
-        img = Image.open(BytesIO(file_body))
-        img.save("current.jpg")
-        ml_response = None
-        with open("current.jpg") as f:
-            ml_response = utility.predict.predict(f)
+        img = np.array(Image.open(BytesIO(file_body))).astype('uint8')
 
-        details = {}
+        gps = self.get_body_argument("gps")
+
+        ml_response = yield predict.predict(img)
+
+        print(ml_response)
+        
         # if int(send(details=details)) != 201:
         #     self.write(json.dumps({"status": "something went wrong"}))
         #
@@ -84,7 +88,7 @@ class MLHandler(tornado.web.RequestHandler):
         #     if int(send()) != 201:
         #         self.write(json.dumps({"status": "something went wrong"}))
 
-        self.write(json.dumps({'data2': str(file_body)}))
+        # self.write(json.dumps({'data2': ml_response['img_label']}))
 
 
 if __name__ == "__main__":
