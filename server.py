@@ -9,12 +9,10 @@ from tornado.gen import coroutine
 from tornado.options import define, options
 import tornado.escape
 import base64
-import requests
 from send import send
 from utility import predict
 from io import BytesIO
-import face_recognition
-
+from google.cloud import firestore
 import base64
 
 import numpy as np
@@ -32,7 +30,7 @@ class BaseHandler(tornado.web.RequestHandler):
 
     def db(self):
         clientz = self.settings['db_client']
-        db = clientz.tornado
+        db = clientz.projectx
         return db
 
     def write_error(self, status_code, **kwargs):
@@ -63,7 +61,7 @@ class my404handler(BaseHandler):
         }))
 
 
-class MLHandler(tornado.web.RequestHandler):
+class MLHandler(BaseHandler):
     def set_default_headers(self):
         self.set_header("Access-Control-Allow-Origin", "*")
         self.set_header("Access-Control-Allow-Headers", "x-requested-with")
@@ -75,12 +73,16 @@ class MLHandler(tornado.web.RequestHandler):
         file_body = self.request.files['pic'][0]['body']
         img = np.array(Image.open(BytesIO(file_body))).astype('uint8')
 
-        gps = self.get_body_argument("gps")
-
+        gp = self.get_body_argument("gps")
         ml_response = yield predict.predict(img)
-
         print(ml_response)
-        
+        img = Image.open(BytesIO(file_body))
+        img.save("current.jpg")
+        with open("current.jpg") as f:
+            ml_response = utility.predict.predict(f)
+
+        # db = self.db()
+        # details = yield db.find_one({"District": "Vellore"})
         # if int(send(details=details)) != 201:
         #     self.write(json.dumps({"status": "something went wrong"}))
         #
@@ -88,19 +90,28 @@ class MLHandler(tornado.web.RequestHandler):
         #     if int(send()) != 201:
         #         self.write(json.dumps({"status": "something went wrong"}))
 
-        # self.write(json.dumps({'data2': ml_response['img_label']}))
+        fire = firestore.Client()
+        x = fire.collection("data").document("1")
+        with open("current.jpg", "rb") as f:
+            ig = base64.b64encode(f.read())
+            payload = f'{"gps": {gp}, "label": {ml_response.img_label}, "img": {ig}}'
+            y = x.get().to_dict()['data']
+            y.append(payload)
+            x.set({"data": y})
+
+        self.write(json.dumps({'flag': 'Everthing is coool'}))
 
 
 if __name__ == "__main__":
     options.parse_command_line()
-    # client = motor_tornado.MotorClient("mongodb://"+os.environ['tornado_user']+":"+ os.environ['tornado_pass']+"@ds117605.mlab.com:17605/tornado")
+    client = motor_tornado.MotorClient("mongodb://user:pass@ds143030.mlab.com:43030/projectx")
     app = tornado.web.Application(
         handlers=[
-            (r"/mlpredict", MLHandler),
+            (r"/mlpredict", MLHandler)
         ],
-        default_handler_class = my404handler,
-        debug=True
-        # db_client=client
+        default_handler_class=my404handler,
+        debug=True,
+        db_client=client
     )
     http_server = tornado.httpserver.HTTPServer(app)
     http_server.listen(os.environ.get("PORT", options.port))
