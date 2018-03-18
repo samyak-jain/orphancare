@@ -5,10 +5,14 @@ sg = sendgrid.SendGridAPIClient(apikey="SG.UROmiGMISJy79kF1_wjfaQ.HAA_OgEqOoc7t0
 from_email = Email("samtan106@gmail.com")
 
 
-def send(em = "rohan.rodrigues2016@vitstudent.ac.in", details=None):
+def send(gp, ig, em="rohan.rodrigues2016@vitstudent.ac.in"):
     to_email = Email(em)
     subject = "Regarding missing children"
-    st = ""
+    x = open("template.html")
+    st = x.read()
+    x.close()
+    st.replace("__img__", ig)
+    st.replace("__gps__", gp)
     content = Content("text/html", st)
     mail = Mail(from_email, subject, to_email, content)
     response = sg.client.mail.send.post(request_body=mail.get())

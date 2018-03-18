@@ -77,26 +77,21 @@ class MLHandler(BaseHandler):
         img.save("current.jpg")
         img = np.array(img).astype('uint8')
         ml_response = yield predict.predict(img)
-
-
         gp = self.get_body_argument("gps")
         print(ml_response)
 
-
-
-
         # db = self.db()
         # details = yield db.find_one({"District": "Vellore"})
-        # if int(send(details=details)) != 201:
-        #     self.write(json.dumps({"status": "something went wrong"}))
-        #
-        # if not ml_response:
-        #     if int(send()) != 201:
-        #         self.write(json.dumps({"status": "something went wrong"}))
-        fire = firestore.Client()
-        x = fire.collection("data").document("1")
         with open("current.jpg", "rb") as f:
             ig = base64.b64encode(f.read())
+            if int(send(gp, ig)) != 202:
+                self.write(json.dumps({"status": "something went wrong"}))
+            if not ml_response:
+                if int(send(gp, ig, em="svineth.face@gmail.com")) != 202 and int(send(gp, ig)) != 202:
+                    self.write(json.dumps({"status": "something went wrong"}))
+
+            fire = firestore.Client()
+            x = fire.collection("data").document("1")
             payload = {
                 "gps": gp,
                 "label": ml_response['img_label'],
