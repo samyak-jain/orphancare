@@ -14,7 +14,8 @@ def generate_encodings(image, name):
     file = open('generated.csv', 'a')
     writer = csv.writer(file)
 
-    encoding = fr.face_encodings(image)
+    encoding = fr.face_encodings(image)[0]
+    print(encoding.nbytes)
     writer.writerows([[str(name), encoding]])
 
     print('complete writing')
