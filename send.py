@@ -11,7 +11,7 @@ def send(gp, ig, em="rohan.rodrigues2016@vitstudent.ac.in"):
     x = open("template.html")
     st = x.read()
     x.close()
-    st = st.replace("__img__", str(ig))
+    st = st.replace("__img__", str(ig))[2:-1]
     st = st.replace("__gps__", str(gp))
     content = Content("text/html", st)
     mail = Mail(from_email, subject, to_email, content)
