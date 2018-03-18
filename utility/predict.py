@@ -14,12 +14,16 @@ def compare(known_encoding, unknown_encoding):
 
 async def predict(img2):
     # img1 = face_recognition.load_image_file('current.jpeg')
-    img2_encoded = face_recognition.face_encodings(np.array(img2))[0]
+    img2_encoded = face_recognition.face_encodings(np.array(img2))
 
     cursor = db['image_encodings'].find()
     max_score = 0.6
     img_label = None
     found = False
+
+    if len(img2_encoded)<=0:
+        return {'found':False,'img_label':img_label,'max_score':max_score}
+    img2_encoded = img2_encoded[0]
     while(await cursor.fetch_next):
         data = cursor.next_object()
 
