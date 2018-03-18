@@ -62,6 +62,9 @@ class my404handler(BaseHandler):
                 'message': 'illegal call.'
         }))
 
+class test(BaseHandler):
+    def get(self):
+        self.write(json.dumps({"abc": "def"}))
 
 class MLHandler(BaseHandler):
     def set_default_headers(self):
@@ -109,6 +112,7 @@ if __name__ == "__main__":
     client = motor_tornado.MotorClient("mongodb://user:pass@ds143030.mlab.com:43030/projectx")
     app = tornado.web.Application(
         handlers=[
+            (r"/", test),
             (r"/mlpredict", MLHandler)
         ],
         default_handler_class=my404handler,
