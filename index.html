@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WJN9BFZ');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Analytics -->
+<script>
+  (function(i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function() {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-27761864-15', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+<title>  Downloads | Anaconda</title>
+
+<meta charset="UTF-8" />	
+<meta http-equiv="X-UA-Compatible" content="IE=edge" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- hreflang -->
+<link rel="canonical" href="https://www.anaconda.com/download/" />
+<link rel="alternate" href="https://www.anaconda.com/download/?lang=en-us" hreflang="en-us" />
+<link href="//www.google-analytics.com" rel="dns-prefetch" />
+
+<!-- Begin Meta -->
+<meta name="keywords" content="python distribution, data science platform, python for data science, python mac, python linux, python windows,python distribution, data science platform, data science ecosystem, data science for big data, python mac, python windows, python linux, enterprise analytics, data science for enterprises, python data science, anaconda2, anaconda3" />
+<meta name="description" content="Download Anaconda Distribution for 1,000+ Python and R data science packages, a package, environment, and dependency manager, and free community support." />
+
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@AnacondaInc" />
+<meta name="twitter:title" content="Downloads" />
+<meta name="twitter:description" content="Download Anaconda Distribution for 1,000+ Python and R data science packages, a package, environment, and dependency manager, and free community support." />
+<meta name="twitter:image" content="https://www.anaconda.com/wp-content/themes/anaconda/images/anaconda-card.jpg" />
+<!-- Twitter Summary card images must be at least 120x120px -->
+
+<!-- Open Graph data -->
+<meta property="og:title" content="Downloads" />
+<meta property="og:type" content="web"/>
+<meta property="og:url" content="https://www.anaconda.com/download/" />
+<meta property="og:video" content="" />
+<meta property="og:image" content="https://www.anaconda.com/wp-content/themes/anaconda/images/anaconda-card.jpg" />
+<meta property="og:description" content="Download Anaconda Distribution for 1,000+ Python and R data science packages, a package, environment, and dependency manager, and free community support." />
+<meta property="og:site_name" content="Anaconda" />
+<meta property="fb:admins" content="" />
+<!-- End Meta -->
+
+<!-- Favicons -->
+<link rel="shortcut icon" href="https://www.anaconda.com/wp-content/themes/anaconda/images/favicons/favicon.ico" />	
+
+<link rel="apple-touch-icon" sizes="57x57" href="https://www.anaconda.com/wp-content/themes/anaconda/images/favicons/apple-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="60x60" href="https://www.anaconda.com/wp-content/themes/anaconda/images/favicons/apple-icon-60x60.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="https://www.anaconda.com/wp-content/themes/anaconda/images/favicons/apple-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="https://www.anaconda.com/wp-content/themes/anaconda/images/favicons/apple-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="https://www.anaconda.com/wp-content/themes/anaconda/images/favicons/apple-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="https://www.anaconda.com/wp-content/themes/anaconda/images/favicons/apple-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="https://www.anaconda.com/wp-content/themes/anaconda/images/favicons/apple-icon-152x152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.anaconda.com/wp-content/themes/anaconda/images/favicons/apple-icon-180x180.png" />
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.anaconda.com/wp-content/themes/anaconda/images/favicons/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="96x96" href="https://www.anaconda.com/wp-content/themes/anaconda/images/favicons/favicon-96x96.png" />
+ 
+<meta name="msapplication-config" content="https://www.anaconda.com/wp-content/themes/anaconda/images/favicons/browserconfig.xml" />
+<link rel="manifest" href="https://www.anaconda.com/wp-content/themes/anaconda/images/favicons/manifest.json" />
+
+<!-- Scripts & styles -->
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel='stylesheet' id='conda-css'  href='https://www.anaconda.com/wp-content/themes/anaconda/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='proxima-nova-css'  href='https://www.anaconda.com/wp-content/themes/anaconda/fonts/proxima-nova/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='anaconda-icons-css'  href='https://www.anaconda.com/wp-content/themes/anaconda/fonts/anaconda/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='flickity-css'  href='https://www.anaconda.com/wp-content/themes/anaconda/scripts/vendor/flickity/flickity.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-css'  href='https://www.anaconda.com/wp-content/themes/anaconda/scripts/vendor/fancybox/jquery.fancybox.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='lightbox-css'  href='https://www.anaconda.com/wp-content/themes/anaconda/scripts/vendor/lightbox/lightbox.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='libre-baskerville-css'  href='https://fonts.googleapis.com/css?family=Libre+Baskerville&#038;ver=1.1.7' type='text/css' media='all' />
+<link rel='stylesheet' id='bokeh-css'  href='https://www.anaconda.com/wp-content/themes/anaconda/scripts/vendor/bokeh/bokeh.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='anaconda-css'  href='https://www.anaconda.com/wp-content/themes/anaconda/css/anaconda.lib.css' type='text/css' media='all' />
+<style type="text/css" id="style-download">#hero-title h5 a i { position:relative;display:block;height:45px;}#hero-title h5 a i:after {content:"";display:block;border-bottom:2px solid transparent;width:100%;height:1px;position:relative;top:5px;}#hero-title h5 a:hover {text-decoration:none;}#hero-title h5 a:hover i:after {border-bottom-color:#fff;}.icon-question {border:1px solid;line-height:10px;padding:2px;border-radius:100%;font-size:12px !important;display:block !important;width:16px;height:16px;text-align:center;transform:scale(0.9);position:relative;top:-2px;}.text-fine-print.inline-block + .modal-instance .icon-question {left:8px;top:-8px;}#menu-fs, #menu-mobile {background:#fff;box-shadow:0 2px 4px 0 rgba(0,0,0,0.0865);}.downloads-help-links {font-size:16px;}#download sup {top:-5px;}#download h3 + .text-fade {font-size:16px;}#download h3 ~ .modal-instance {font-size:14px;}#hero-title {padding-top:8em;}#hero-title .img-bg-container {background-position:50% 50% !important;}#hero-title .img-bg-container:after {content:"";position:absolute;top:0;left:0;width:100%;height:50px;background:-moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); background:-webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); background:linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); }#get-started a:hover { text-decoration:none;}#download .boxed {padding-top:40px;padding-bottom:40px;}#download p.text-fade + .modal-instance {position:relative;left:3px;top:1px;}#download p.text-fine-print + .modal-instance {position:relative;top:8px;left:-5px;}#download-tabs:not(.pos-fixed) {margin-top:-20px;}.tabs li .tab-title span, .tabs li .tab-title i {color:#43b02a;}.tabs li.active .tab-title span, .tabs li.active .tab-title i {color:#414042;}.tabs li.active .tab-title span {font-weight:700;}#download .tab-content {margin-top:-60px;}@media all and (min-width:768px) and (max-width:1200px) {#download-tabs.tabs {position:static; margin-bottom:100px; padding:15px 0;}}</style><script type='text/javascript' src='https://www.anaconda.com/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='https://www.anaconda.com/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<link rel='https://api.w.org/' href='https://www.anaconda.com/wp-json/' />
+<link rel="alternate" type="application/json+oembed" href="https://www.anaconda.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.anaconda.com%2Fdownload%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.anaconda.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.anaconda.com%2Fdownload%2F&#038;format=xml" />
+
+<script type="text/javascript">
+  // conditionizr.com
+  // configure environment tests
+  if(typeof conditionizr != 'undefined'){
+    conditionizr.config({
+        assets: 'https://www.anaconda.com/wp-content/themes/anaconda',
+        tests: {}
+    });
+   }
+</script>
+
+<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/www.anaconda.com","name":"Anaconda","potentialAction":{"@type":"SearchAction","target":"https:\/\/www.anaconda.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+
+<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"Organization","@id":"#organization","url":"https:\/\/www.anaconda.com","name":"Anaconda, Inc.","legalName":"Anaconda Global, Inc.","contactPoint":[{"@type":"ContactPoint","telephone":"+1-512-222-5440","contactType":"customer service"}],"logo":"https:\/\/www.anaconda.com\/wp-content\/themes\/anaconda\/images\/anaconda-card.jpg","sameAs":["https:\/\/twitter.com\/anacondainc","https:\/\/facebook.com\/anacondainc","https:\/\/www.slideshare.com\/continuumio","https:\/\/www.linkedin.com\/company\/anacondainc","https:\/\/instagram.com\/anaconda_inc","https:\/\/www.youtube.com\/c\/ContinuumIo","https:\/\/www.github.com\/ContinuumIO"]}</script>
+
+<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"Article","@id":"#article","headline":"Downloads","image":["https:\/\/www.anaconda.com\/wp-content\/themes\/anaconda\/images\/anaconda-card.jpg"],"keywords":"python distribution, data science platform, python for data science, python mac, python linux, python windows,python distribution, data science platform, data science ecosystem, data science for big data, python mac, python windows, python linux, enterprise analytics, data science for enterprises, python data science, anaconda2, anaconda3","datePublished":"2017-07-31T17:10:31-0500","dateModified":"2018-03-17T08:44:16-0500","articleSection":"page","creator":"Anaconda","publisher":"Anaconda, Inc.","author":"Anaconda","articleBody":" Don't Miss AnacondaCon Apr 8-11 Austin TX! Download Anaconda Distribution Version [download-label output=\"version\"] | Release Date: [download-label o \u2026","description":" Don't Miss AnacondaCon Apr 8-11 Austin TX! Download Anaconda Distribution Version [download-label output=\"version\"] | Release Date: [download-label o \u2026","mainEntityOfPage":"True"}</script>
+
+</head>
+<body class="page-template page-template-page-full page-template-page-full-php page page-id-2395 dropdowns-hover-lg archive download" data-spy="scroll" data-target="#subnav" data-offset="0">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJN9BFZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+   
+
+<main id="top" class="main-container">
+    
+	<div class="nav-container pos-absolute width-100 z-index-100" style="width: 100%; max-width: none;">
+        
+        		<ul id="top-search" class="accordion bg-dark unmarg pos-top pos-right width-100" data-scroll-class="20vh:pos-fixed">
+			<li class="unmarg">
+				<div class="accordion-content">
+					
+                  <form class="search" method="get" action="https://www.anaconda.com" role="search">
+  <section class="space-xs clearfix">
+    <div class="col-sm-8 col-sm-offset-2">
+      <div class="row">
+          <div class="col-sm-10">
+              <input type="search" name="s" placeholder="I'm looking for&hellip;" autocomplete="off" value="" />
+          </div><!-- .col -->
+          <div class="col-sm-2">
+            <button type="submit" class="btn btn-primary" style="width: auto; height: auto; padding: 8px 32px;">Search</button>
+        </div><!-- .col -->
+      </div><!-- .row -->
+    </div><!-- .col -->          
+  </section>
+</form>
+                  
+				</div><!-- .accordion-content -->
+			</li>
+		</ul>
+        
+        		<div id="menu-mobile" class="bar bar-sm visible-xs visible-sm">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-3 col-sm-2">
+						<a href="https://www.anaconda.com">
+							<img class="logo logo-dark" alt="logo" src="https://www.anaconda.com/wp-content/themes/anaconda/images/logo-dark.png" />
+							<img class="logo logo-light" alt="logo" src="https://www.anaconda.com/wp-content/themes/anaconda/images/logo-dark.png" />
+						</a>
+					</div>
+					<div class="col-xs-9 col-sm-10 text-right">
+						<a href="#" class="hamburger-toggle" data-toggle-class="#menu-fs;hidden-xs hidden-sm">
+							<i class="icon icon-sm anaconda-menu ana ana-menu"></i>
+						</a>
+					</div>
+				</div><!-- .row-->
+			</div><!-- .container-->
+		</div><!-- #menu-mobile-->
+ 
+		<nav id="menu-fs" class="bar bar-2 hidden-xs hidden-sm bar-absolute  unpad z-index-100" data-scroll-class="20vh:pos-fixed">
+			<section class="space-xxs">
+                            <div id="top-nav" class="top-nav container bar-3 pos-absolute pos-top pos-right">
+                  <div class="row">
+                      <div class="col-md-6 col-md-offset-6 text-right text-left-xs text-left-sm unpad">
+                          <div class="bar-module">
+                                                            <ul id="menu-top-nav" class="nav navbar-nav menu-horizontal"><li itemscope="itemscope"  id="menu-item-2360" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2360"><a title="Anaconda Cloud" target="_blank" href="https://anaconda.org/">Anaconda Cloud</a></li>
+<li itemscope="itemscope"  id="menu-item-2361" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2361"><a title="Documentation" target="_blank" href="https://enterprise-docs.anaconda.com/en/latest/">Documentation</a></li>
+<li itemscope="itemscope"  id="menu-item-2362" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2362"><a title="Blog" href="/blog/developer-blog/">Blog</a></li>
+<li itemscope="itemscope"  id="menu-item-2363" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2363"><a title="Contact" href="/contact-us/">Contact</a></li>
+
+			<li title="Search">
+				<a href="#" data-accordion="#top-search">
+					<i class="ana ana-search"></i>
+					<span class="hidden-lg">Search</span>
+				</a>
+			</li>
+			</ul>                          </div>
+                      </div>
+                  </div><!-- .row-->
+              </div><!-- .container-->
+
+                            <div id="main-nav" class="main-nav container pos-relative">
+                  <div class="row">
+                      <div class="col-md-3 col-sm-2 text-left text-left-sm hidden-xs hidden-sm col-md-push-5___">
+                          <div class="bar-module">
+                              <a href="https://www.anaconda.com">
+                                  <img class="logo logo-dark" alt="logo" src="https://www.anaconda.com/wp-content/themes/anaconda/images/logo-dark.png" />
+                                  <img class="logo logo-light hidden-sm" alt="logo" src="https://www.anaconda.com/wp-content/themes/anaconda/images/logo-dark.png" />
+                              </a>
+                          </div><!-- .module-->
+                      </div>
+                      <div class="col-md-9 col-sm-10 col-md-pull-2___ text-right text-left-sm scale-90__">
+                          <div class="bar-module">
+                              <ul id="menu-main-nav" class="nav navbar-nav menu-horizontal"><li itemscope="itemscope"  id="menu-item-2404" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2404"><a title="What is Anaconda?" href="https://www.anaconda.com/what-is-anaconda/">What is Anaconda?</a></li>
+<li itemscope="itemscope"  id="menu-item-2367" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-2367 dropdown"><a title="Products" data-toggle="dropdown" class="dropdown-trigger dropdown-toggle" aria-haspopup="true">Products <span class="caret"></span></a>
+			<div class="dropdown-container text-left">
+				<div class="container">
+					<div class="row">
+						<div class="dropdown-content col-md-3 col-sm-4">
+			
+<ul role="menu" class=" menu-vertical dropdown-menu" >
+	<li itemscope="itemscope"  id="menu-item-3185" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3185"><a title="Anaconda Distribution" href="https://www.anaconda.com/distribution/">Anaconda Distribution</a></li>
+	<li itemscope="itemscope"  id="menu-item-2387" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2387"><a title="Anaconda Enterprise" href="https://www.anaconda.com/enterprise/">Anaconda Enterprise</a></li>
+	<li itemscope="itemscope"  id="menu-item-2397" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2395 current_page_item menu-item-2397 active"><a title="Download" href="https://www.anaconda.com/download/">Download</a></li>
+</ul>
+						</div><!-- .dropdown-content -->
+					</div><!-- .row -->
+				</div><!-- .container -->
+			</div><!-- .dropdown-container -->
+			
+</li>
+<li itemscope="itemscope"  id="menu-item-2406" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2406 dropdown"><a title="Support" data-toggle="dropdown" class="dropdown-trigger dropdown-toggle" aria-haspopup="true">Support <span class="caret"></span></a>
+			<div class="dropdown-container text-left">
+				<div class="container">
+					<div class="row">
+						<div class="dropdown-content col-md-3 col-sm-4">
+			
+<ul role="menu" class=" menu-vertical dropdown-menu" >
+	<li itemscope="itemscope"  id="menu-item-2410" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2410"><a title="Support" href="https://www.anaconda.com/support/">Support</a></li>
+	<li itemscope="itemscope"  id="menu-item-2417" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2417"><a title="Consulting" href="https://www.anaconda.com/consulting/">Consulting</a></li>
+	<li itemscope="itemscope"  id="menu-item-5040" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5040"><a title="Training" href="https://www.anaconda.com/training/">Training</a></li>
+</ul>
+						</div><!-- .dropdown-content -->
+					</div><!-- .row -->
+				</div><!-- .container -->
+			</div><!-- .dropdown-container -->
+			
+</li>
+<li itemscope="itemscope"  id="menu-item-2407" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2407 dropdown"><a title="Community" data-toggle="dropdown" class="dropdown-trigger dropdown-toggle" aria-haspopup="true">Community <span class="caret"></span></a>
+			<div class="dropdown-container text-left">
+				<div class="container">
+					<div class="row">
+						<div class="dropdown-content col-md-3 col-sm-4">
+			
+<ul role="menu" class=" menu-vertical dropdown-menu" >
+	<li itemscope="itemscope"  id="menu-item-2420" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2420"><a title="Community" href="https://www.anaconda.com/community/">Community</a></li>
+	<li itemscope="itemscope"  id="menu-item-2431" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2431"><a title="NumFOCUS" href="https://www.anaconda.com/numfocus/">NumFOCUS</a></li>
+	<li itemscope="itemscope"  id="menu-item-2430" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2430"><a title="Developer Blog" href="/developer-blog/">Developer Blog</a></li>
+</ul>
+						</div><!-- .dropdown-content -->
+					</div><!-- .row -->
+				</div><!-- .container -->
+			</div><!-- .dropdown-container -->
+			
+</li>
+<li itemscope="itemscope"  id="menu-item-2408" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2408 dropdown"><a title="About" data-toggle="dropdown" class="dropdown-trigger dropdown-toggle" aria-haspopup="true">About <span class="caret"></span></a>
+			<div class="dropdown-container text-left">
+				<div class="container">
+					<div class="row">
+						<div class="dropdown-content col-md-3 col-sm-4">
+			
+<ul role="menu" class=" menu-vertical dropdown-menu" >
+	<li itemscope="itemscope"  id="menu-item-2445" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2445"><a title="Leadership" href="https://www.anaconda.com/leadership/">Leadership</a></li>
+	<li itemscope="itemscope"  id="menu-item-2447" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2447"><a title="News" href="/blog/news">News</a></li>
+	<li itemscope="itemscope"  id="menu-item-5697" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5697"><a title="Events" href="https://www.anaconda.com/events/">Events</a></li>
+	<li itemscope="itemscope"  id="menu-item-2446" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2446"><a title="Company Blog" href="/blog/company-blog/">Company Blog</a></li>
+	<li itemscope="itemscope"  id="menu-item-2451" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2451"><a title="Customers" href="https://www.anaconda.com/customers/">Customers</a></li>
+	<li itemscope="itemscope"  id="menu-item-2458" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2458"><a title="Partners" href="https://www.anaconda.com/partners/">Partners</a></li>
+	<li itemscope="itemscope"  id="menu-item-4763" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4763"><a title="Careers" href="https://www.anaconda.com/careers/">Careers</a></li>
+	<li itemscope="itemscope"  id="menu-item-2457" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2457"><a title="Contact Us" href="https://www.anaconda.com/contact-us/">Contact Us</a></li>
+</ul>
+						</div><!-- .dropdown-content -->
+					</div><!-- .row -->
+				</div><!-- .container -->
+			</div><!-- .dropdown-container -->
+			
+</li>
+<li itemscope="itemscope"  id="menu-item-2409" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2409 dropdown"><a title="Resources" data-toggle="dropdown" class="dropdown-trigger dropdown-toggle" aria-haspopup="true">Resources <span class="caret"></span></a>
+			<div class="dropdown-container text-left">
+				<div class="container">
+					<div class="row">
+						<div class="dropdown-content col-md-3 col-sm-4">
+			
+<ul role="menu" class=" menu-vertical dropdown-menu" >
+	<li itemscope="itemscope"  id="menu-item-2434" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2434"><a title="Presentations" href="/presentations">Presentations</a></li>
+	<li itemscope="itemscope"  id="menu-item-2435" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2435"><a title="Webinars" href="/webinars">Webinars</a></li>
+	<li itemscope="itemscope"  id="menu-item-2436" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2436"><a title="Whitepapers &amp; eBooks" href="/whitepapers">Whitepapers &#038; eBooks</a></li>
+	<li itemscope="itemscope"  id="menu-item-2437" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2437"><a title="Videos" href="/videos">Videos</a></li>
+</ul>
+						</div><!-- .dropdown-content -->
+					</div><!-- .row -->
+				</div><!-- .container -->
+			</div><!-- .dropdown-container -->
+			
+</li>
+<li itemscope="itemscope"  id="menu-item-4316" class="btn btn-primary btn-sm text-bolder scale-90 pos-relative menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-4316 active"><a title="Download" href="/download">Download</a></li>
+</ul>                          </div><!-- .module-->
+                      </div>
+                  </div><!-- .row-->
+              </div><!-- .container-->
+              
+			</section><!-- .space-->
+		</nav><!-- #menu-fs -->
+
+	</div><!-- .nav-container -->
+    
+    <div class="wrapper">
+<div class="fullpage-content">
+    
+	<section id="hero-title" class="img-bg img-light cover cover-blocks bg-secondary height-55" data-overlay="1">
+    <div class="img-bg-container hidden-xs___ flip-y">
+        <img alt="background" src="https://www.anaconda.com/wp-content/uploads/2017/08/Homepageslider-1-background-01.png" />
+    </div>
+    <div class="container pos-vertical-center z-index-10" style="top:30%">
+        <div class="row text-center-xs mt-2">
+            <div class="col-sm-12 text-center">
+                <div class="unmarg-top row">
+					<h4 style="margin-bottom: 20px"><a class="text-bold color-white" style="text-decoration: underline; text-decoration-color: white" href="https://anacondacon.io">Don't Miss AnacondaCon Apr 8-11 Austin TX!</a></h4>
+                    <h1 class="text-bolder text-uppercase___ color-white">
+                        <!-- <i class="icon icon-sm ana ana-icon color-primary block" style="font-size: 90px; margin-bottom: 20px;"></i> -->
+                        Download Anaconda Distribution
+                    </h1>
+                    <h4 class="unmarg inline-block"><span class="text-bold color-white">Version 5.1</span></h4>
+                    <span class="sep inline-block color-white">|</span>
+                     <span class="inline-block text-fine-print__ color-white">Release Date: February 15, 2018</span>
+                    <h5 class="h3 color-white text-bold mt-1">
+                        <span class="inline-block" style="vertical-align: middle;">Download For:</span>
+                        <a class="text-uppercase__ inner-link inline-block" href="#download" style="vertical-align: middle;" data-tooltip="Windows">
+                            <i class="icon icon-md ana ana-windows scale-80"></i>
+                        </a>
+                        <a class="text-uppercase__ inner-link inline-block" href="#download" style="vertical-align: middle;" data-tooltip="macOS">
+                            <i class="icon icon-md ana ana-apple scale-80"></i>
+                        </a>
+                        <a class="text-uppercase__ inner-link inline-block" href="#download" style="vertical-align: middle;" data-tooltip="Linux">
+                            <i class="icon icon-md ana ana-linux scale-80"></i>
+                        </a>
+                    </h5>
+                </div>
+            </div>
+        </div><!-- .row --->
+    </div><!-- .container --->
+</section>
+
+
+<section class="bg-white unpad" style="float: left; width: 100%;">
+
+    <div class="container vertical-center">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="boxed boxed-border__ text-center">
+                    <h4 class="text-bold">
+                        High-Performance Distribution
+                    </h4>
+                    <p>
+                        Easily install 1,000+ <a class="color-primary-1" href="https://docs.anaconda.com/anaconda/packages/pkg-docs" target="_blank" rel="noopener">data science packages</a>
+                    </p>
+                </div>                            
+            </div><!-- .col -->
+            <div class="col-sm-4">                            
+                <div class="boxed boxed-border__ text-center">
+                    <h4 class="text-bold">
+                        Package Management
+                    </h4>
+                    <p>
+                     Manage packages, dependencies and environments with <a class="color-primary-1" href="https://conda.io/docs/" target="_blank" rel="noopener">conda</a>
+                    </p>
+                </div>                            
+            </div><!-- .col -->
+            <div class="col-sm-4">                            
+                <div class="boxed boxed-border__ text-center">
+                    <h4 class="text-bold">
+                        Portal to Data Science
+                    </h4>
+                    <p>
+                        Uncover insights in your data and create interactive visualizations
+                    </p>
+                </div>                            
+            </div><!-- .col -->
+        </div>
+
+    </div><!-- .container -->
+</section>
+
+
+
+<section id="download" class="space-xs bg-secondary">
+    
+    <div id="windows"></div>
+    <div id="macos"></div>
+    <div id="linux"></div>
+    
+    <div class="container">
+        <div class="row">
+        <h2 class="text-center">Download for Your Preferred Platform</h2>
+        </div><!-- .row -->
+    </div><!-- .container -->
+    
+    
+
+    <div id="modal-thankyou" class="modal-instance inline-block">
+         <a class="modal-trigger color-dark" href="#" style="visibility: hidden; position: fixed;">
+            Open
+         </a>
+        <div class="modal-container">
+            <div class="modal-content modal-md">
+            <div class="boxed boxed-lg">
+                <!-- Downloads Cheat sheet Modal -->
+<div id="cheatSheet" data-marketo-form="1" class="text-center" aria-labelledby="mktoFormTitle" aria-hidden="true" role="dialog">
+	
+		<!-- Heading -->
+		<h2 id="mktoFormTitle" class="main-headline mktoFormTitle text-normal">Thank You for Downloading Anaconda!</h2>
+		<p>Get Started with the Anaconda Cheat Sheet</p>
+
+		<!-- Marketo Form -->		
+		<form id="mktoForm_1120"></form>
+
+		<!-- Confirmation -->
+		<div class="mktoFormConfirmation">
+			<p>Thank you, the Anaconda Cheat Sheet is on its way.</p>
+		</div>
+
+		<!-- Cancel -->
+		<button class="btn btn-outline btn-sm modal-close anchor-button" aria-label="No thank you. Close dialogue" style="margin-top: 10px;">
+			No Thanks
+		</button>
+
+</div><!-- .boxed -->
+            </div>
+            </div>
+        </div>
+    </div><!-- .modal instance-->
+
+
+    <div class="tabs-container text-center" data-content-align="center">
+        <ul id="download-tabs" class="tabs marg-auto block bg-white width-100 hidden-xs" data-scroll-class="100vh:pos-fixed">
+            
+            <li class="active">
+            <div class="tab-title">
+                 <span class="h4 unmarg text-center">
+                    <i class="icon icon-xs ana ana-windows"></i>
+                    <span class="space"> </span>
+                    Windows
+                 </span>
+            </div><!-- .tab-title -->
+            
+            <div class="tab-content">
+            <div class="container">
+            
+                    <div class="row mt-1">
+                    <h2 class="text-center text-normal"><span class="color-primary">Anaconda 5.1</span> For Windows Installer</h2>
+                    </div><!-- .row -->
+
+                    <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="boxed boxed-border text-center">
+                                    <h3 class="unmarg text-bolder">
+                                        Python 3.6 version <sup>*</sup>
+                                    </h3>
+                                    <p style="margin: 0.8755em 0;">
+                                     <a class="btn btn-primary btn-lg text-uppercase__" href="https://repo.continuum.io/archive/Anaconda3-5.1.0-Windows-x86_64.exe">
+                                         <span class="btn-text">
+                                            <i class="icon icon-xs ana ana-download scale-80 color-white"></i>
+                                            <strong class="color-white">Download</strong>
+                                         </span>
+                                     </a>
+                                    </p>
+                                    <p class="text-fine-print">
+                                        <a class="color-primary-1" href="https://repo.continuum.io/archive/Anaconda3-5.1.0-Windows-x86_64.exe">64-Bit Graphical Installer (537 MB)</a>
+                                        <br />
+                                        <a class="color-primary-1" href="https://repo.continuum.io/archive/Anaconda3-5.1.0-Windows-x86.exe">32-Bit Graphical Installer (436 MB)</a>
+                                    </p>
+                                    <div class="modal-instance inline-block" style="position: relative; top: -49px; left: 107px;">
+                                     <a class="modal-trigger color-dark" href="#" data-tooltip="Click to learn more">
+                                         <i class="icon icon-xs text-fade icon-question text-normal">?</i>
+                                     </a>
+                                    <div class="modal-container">
+                                        <div class="modal-content">
+                                            <div class="boxed boxed-lg">
+                                                <h2>Graphical Installer</h2>
+                                                <hr class="short" />
+                                                <p class="lead">
+                                                 The Graphical Installer is like a Wizard that walks you through each step.
+                                                </p>
+                                                <p>
+                                                 <img src="https://www.anaconda.com/wp-content/uploads/2017/08/graph_installer.png" />
+                                                </p>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- .modal instance-->
+                                </div>                    
+                            </div><!-- .col -->
+                            <div class="col-md-6">
+                                <div class="boxed boxed-border text-center">
+                                    <h3 class="unmarg text-bolder">
+                                        Python 2.7 version <sup>*</sup>
+                                    </h3>
+
+                                    <p style="margin: 0.8755em 0;">
+                                     <a class="btn btn-primary btn-lg text-uppercase__" href="https://repo.continuum.io/archive/Anaconda2-5.1.0-Windows-x86_64.exe">
+                                         <span class="btn-text">
+                                            <i class="icon icon-xs ana ana-download scale-80 color-white"></i>
+
+                                            <strong class="color-white">Download</strong>
+                                         </span>
+                                     </a>
+                                    </p>
+                                    <p class="text-fine-print">
+                                        <a class="color-primary-1" href="https://repo.continuum.io/archive/Anaconda2-5.1.0-Windows-x86_64.exe">64-Bit Graphical Installer (523 MB)</a>
+                                        <br />
+                                        <a class="color-primary-1" href="https://repo.continuum.io/archive/Anaconda2-5.1.0-Windows-x86.exe">32-Bit Graphical Installer (420 MB)</a>
+                                    </p>
+                                    <div class="modal-instance inline-block" style="position: relative; top: -49px; left: 107px;">
+                                     <a class="modal-trigger color-dark" href="#" data-tooltip="Click to learn more">
+                                         <i class="icon icon-xs text-fade icon-question text-normal">?</i>
+                                     </a>
+                                    <div class="modal-container">
+                                        <div class="modal-content">
+                                        <div class="boxed boxed-lg">
+                                            <h2>Graphical Installer</h2>
+                                            <hr class="short" />
+                                            <p class="lead">
+                                             The Graphical Installer is like a Wizard that walks you through each step.
+                                            </p>
+                                            <p>
+                                             <img src="https://www.anaconda.com/wp-content/uploads/2017/08/graph_installer.png" />
+                                            </p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </div><!-- .modal instance-->
+                                </div>                    
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                        <div class="row downloads-help-links text-center">
+                            <a class="color-primary-1 text-underline" href="https://docs.anaconda.com/anaconda/faq#i-am-behind-a-firewall-how-can-i-download-anaconda " target="_blank" rel="noopener">Behind a firewall?</a>
+                            <br />
+                            <sup class="color-primary-1">*</sup><a class="color-primary-1 text-underline" target="_blank" href="https://docs.anaconda.com/anaconda/faq#how-do-i-get-the-latest-anaconda-with-python-3-5" rel="noopener">How to get Python 3.5 or other Python versions</a>
+                            <br />
+                            <a class="color-primary-1 text-underline" target="_blank" href="https://docs.anaconda.com/anaconda/install/windows" rel="noopener">How to Install ANACONDA</a>
+                        </div><!-- .row -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+                </div><!-- .container -->
+            </div><!-- .tab-content -->            
+            </li>
+            
+            <li>
+            
+            <div class="tab-title">
+                 <span class="h4 unmarg text-center">
+                    <i class="icon icon-xs ana ana-apple"></i>
+                    <span class="space"> </span>
+                    macOS
+                 </span>
+            </div><!-- .tab-title -->
+            
+            <div class="tab-content">
+                <div class="container">
+                    <div class="row mt-1">
+                    <h2 class="text-center text-normal"><span class="color-primary">Anaconda 5.1</span> For macOS Installer</h2>
+                    </div><!-- .row -->
+
+                    <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="boxed boxed-border text-center">
+                                    <h3 class="unmarg text-bolder">
+                                        Python 3.6 version <sup>*</sup>
+                                    </h3>
+
+                                    <p style="margin: 0.8755em 0;">
+                                     <a class="btn btn-primary btn-lg text-uppercase__" href="https://repo.continuum.io/archive/Anaconda3-5.1.0-MacOSX-x86_64.pkg">
+                                         <span class="btn-text">
+                                            <i class="icon icon-xs ana ana-download scale-80 color-white"></i>
+
+                                            <strong class="color-white">Download</strong>
+                                         </span>
+                                     </a>
+                                    </p>
+
+                                    <p class="text-fine-print inline-block">
+                                        <a class="color-primary-1" href="https://repo.continuum.io/archive/Anaconda3-5.1.0-MacOSX-x86_64.pkg">64-Bit Graphical Installer (595 MB)</a>
+                                        <br />
+                                        <a class="color-primary-1" href="https://repo.continuum.io/archive/Anaconda3-5.1.0-MacOSX-x86_64.sh">64-Bit Command-Line Installer (511 MB)</a>
+                                    </p>
+                                    
+                                    <div class="modal-instance inline-block" style="top: -13px; position: relative; left: -16px;">
+                                     <a class="modal-trigger color-dark" href="#" data-tooltip="Click to learn more">
+                                         <i class="icon icon-xs text-fade icon-question text-normal">?</i>
+                                     </a>
+                                    <div class="modal-container">
+                                        <div class="modal-content">
+                                        <div class="boxed boxed-lg">
+                                            <h2>Graphical Installer</h2>
+                                            <hr class="short" />
+                                            <p class="lead">
+                                             The Graphical Installer is like a Wizard that walks you through each step.
+                                            </p>
+                                            <p>
+                                             <img src="https://www.anaconda.com/wp-content/uploads/2017/08/graph_installer.png" />
+                                            </p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </div><!-- .modal instance-->
+                                    
+                                    <div class="modal-instance inline-block" style="position: relative; left: -17px;">
+                                     <a class="modal-trigger color-dark" href="#" data-tooltip="Click to learn more">
+                                        <i class="icon icon-xs text-fade icon-question text-normal">?</i>
+                                     </a>
+                                    <div class="modal-container">
+                                        <div class="modal-content">
+                                        <div class="boxed boxed-lg">
+                                            <h2>Command-Line Installer</h2>
+                                            <hr class="short" />
+                                            <p class="lead">
+                                             The Command Line Installer is used in a terminal window or command prompt where you type commands to install Anaconda.
+                                            </p>
+                                            <p>
+                                             <img src="https://www.anaconda.com/wp-content/uploads/2017/08/cli_installer.png" />
+                                            </p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </div><!-- .modal instance-->
+
+                                </div>                    
+                            </div><!-- .col -->
+                            <div class="col-md-6">
+                                <div class="boxed boxed-border text-center">
+                                    <h3 class="unmarg text-bolder">
+                                        Python 2.7 version <sup>*</sup>
+                                    </h3>
+
+                                    <p style="margin: 0.8755em 0;">
+                                     <a class="btn btn-primary btn-lg text-uppercase__" href="https://repo.continuum.io/archive/Anaconda2-5.1.0-MacOSX-x86_64.pkg">
+                                         <span class="btn-text">
+                                            <i class="icon icon-xs ana ana-download scale-80 color-white"></i>
+
+                                            <strong class="color-white">Download</strong>
+                                         </span>
+                                     </a>
+                                    </p>
+                                    <p class="text-fine-print inline-block">
+                                        <a class="color-primary-1" href="https://repo.continuum.io/archive/Anaconda2-5.1.0-MacOSX-x86_64.pkg">64-Bit Graphical Installer (588 MB)</a>
+                                        <br />
+                                        <a class="color-primary-1" href="https://repo.continuum.io/archive/Anaconda2-5.1.0-MacOSX-x86_64.sh">64-Bit Command-Line Installer (506 MB)</a>
+                                    </p>
+
+                                    <div class="modal-instance inline-block" style="top: -13px; position: relative; left: -16px;">
+                                     <a class="modal-trigger color-dark" href="#" data-tooltip="Click to learn more">
+                                         <i class="icon icon-xs text-fade icon-question text-normal">?</i>
+                                     </a>
+                                    <div class="modal-container">
+                                        <div class="modal-content">
+                                        <div class="boxed boxed-lg">
+                                            <h2>Graphical Installer</h2>
+                                            <hr class="short" />
+                                            <p class="lead">
+                                             The Graphical Installer is like a Wizard that walks you through each step.
+                                            </p>
+                                            <p>
+                                             <img src="https://www.anaconda.com/wp-content/uploads/2017/08/graph_installer.png" />
+                                            </p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </div><!-- .modal instance-->
+
+                                    <div class="modal-instance inline-block" style="position: relative; left: -17px;">
+                                     <a class="modal-trigger color-dark" href="#" data-tooltip="Click to learn more">
+                                        <i class="icon icon-xs text-fade icon-question text-normal">?</i>
+                                     </a>
+                                    <div class="modal-container">
+                                        <div class="modal-content">
+                                        <div class="boxed boxed-lg">
+                                            <h2>Command-Line Installer</h2>
+                                            <hr class="short" />
+                                            <p class="lead">
+                                             The Command Line Installer is used in a terminal window or command prompt where you type commands to install Anaconda.
+                                            </p>
+                                            <p>
+                                             <img src="https://www.anaconda.com/wp-content/uploads/2017/08/cli_installer.png" />
+                                            </p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </div><!-- .modal instance-->
+
+                                </div>                    
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                        <div class="row downloads-help-links text-center">
+                            <sup class="color-primary-1">*</sup><a class="color-primary-1 text-underline" target="_blank" href="https://docs.anaconda.com/anaconda/faq#how-do-i-get-the-latest-anaconda-with-python-3-5" rel="noopener">How to get Python 3.5 or other Python versions</a>
+                            <br />
+                            <a class="color-primary-1 text-underline" target="_blank" href="https://docs.anaconda.com/anaconda/install/mac-os#macos-graphical-install" rel="noopener">How to Install ANACONDA</a>
+                        </div><!-- .row -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+                
+            </div><!-- .tab-content -->
+            </li>
+            
+            <li>
+            
+            <div class="tab-title">
+                 <span class="h4 unmarg text-center">
+                    <i class="icon icon-xs ana ana-linux"></i>
+                    <span class="space"> </span>
+                    Linux
+                 </span>
+            </div><!-- .tab-title -->
+            
+            <div class="tab-content">
+                
+                <div class="container">
+
+                    <div class="row mt-1">
+                    <h2 class="text-center text-normal"><span class="color-primary">Anaconda 5.1</span> For Linux Installer</h2>
+                    </div><!-- .row -->
+
+                    <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="boxed boxed-border text-center">
+                                    <h3 class="unmarg text-bolder">
+                                        Python 3.6 version <sup>*</sup>
+                                    </h3>
+
+                                    <p style="margin: 0.8755em 0;">
+                                     <a class="btn btn-primary btn-lg text-uppercase__" href="https://repo.continuum.io/archive/Anaconda3-5.1.0-Linux-x86_64.sh">
+                                         <span class="btn-text">
+                                            <i class="icon icon-xs ana ana-download scale-80 color-white"></i>
+                                            <strong class="color-white">Download</strong>
+                                         </span>
+                                     </a>
+                                    </p>
+                                    <p class="text-fine-print">
+                                     <a class="color-primary-1" href="https://repo.continuum.io/archive/Anaconda3-5.1.0-Linux-x86_64.sh">64-Bit (x86) Installer (551 MB)</a>
+                                     <br />                                    
+                                     <a class="color-primary-1" href="https://repo.continuum.io/archive/Anaconda3-5.1.0-Linux-ppc64le.sh">64-Bit (Power8) Installer (286 MB)</a>
+                                     <br />
+                                     <a class="color-primary-1" href="https://repo.continuum.io/archive/Anaconda3-5.1.0-Linux-x86.sh">32-Bit Installer (450 MB)</a>
+                                    </p>
+                                    <div class="modal-instance inline-block" style="position: relative; top: -69px; left: 97px;">
+                                         <a class="modal-trigger color-dark" href="#" data-tooltip="Click to learn more">
+                                            <i class="icon icon-xs text-fade icon-question text-normal">?</i>
+                                         </a>
+                                        <div class="modal-container">
+                                            <div class="modal-content">
+                                            <div class="boxed boxed-lg">
+                                                <h2>Command-Line Installer</h2>
+                                                <hr class="short" />
+                                                <p class="lead">
+                                                 The Command Line Installer is used in a terminal window or command prompt where you type commands to install Anaconda.
+                                                </p>
+                                                <p>
+                                                 <img src="https://www.anaconda.com/wp-content/uploads/2017/08/cli_installer.png" />
+                                                </p>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- .modal instance-->
+                                </div>                    
+                            </div><!-- .col -->
+                            <div class="col-md-6">
+                                <div class="boxed boxed-border text-center">
+                                    <h3 class="unmarg text-bolder">
+                                        Python 2.7 version <sup>*</sup>
+                                    </h3>
+                                    <p style="margin: 0.8755em 0;">
+                                     <a class="btn btn-primary btn-lg text-uppercase__" href="https://repo.continuum.io/archive/Anaconda2-5.1.0-Linux-x86_64.sh">
+                                         <span class="btn-text">
+                                            <i class="icon icon-xs ana ana-download scale-80 color-white"></i>
+
+                                            <strong class="color-white">Download</strong>
+                                         </span>
+                                     </a>
+                                    </p>
+                                    <p class="text-fine-print">
+                                     <a class="color-primary-1" href="https://repo.continuum.io/archive/Anaconda2-5.1.0-Linux-x86_64.sh">64-Bit (x86) Installer (533 MB)</a>
+                                     <br />
+                                     <a class="color-primary-1" href="https://repo.continuum.io/archive/Anaconda2-5.1.0-Linux-ppc64le.sh">64-Bit (Power8) Installer (267 MB)</a>
+                                     <br />
+                                     <a class="color-primary-1" href="https://repo.continuum.io/archive/Anaconda2-5.1.0-Linux-x86.sh">32-Bit Installer (431 MB)</a>
+                                    </p>
+                                    <div class="modal-instance inline-block" style="position: relative; top: -69px; left: 97px;">
+                                     <a class="modal-trigger color-dark" href="#" data-tooltip="Click to learn more">
+                                         <i class="icon icon-xs text-fade icon-question text-normal">?</i>
+                                     </a>
+                                    <div class="modal-container">
+                                        <div class="modal-content">
+                                        <div class="boxed boxed-lg">
+                                            <h2>Command-Line Installer</h2>
+                                            <hr class="short" />
+                                            <p class="lead">
+                                             The Command Line Installer is used in a terminal window or command prompt where you type commands to install Anaconda.
+                                            </p>
+                                            <p>
+                                             <img src="https://www.anaconda.com/wp-content/uploads/2017/08/cli_installer.png" />
+                                            </p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </div><!-- .modal instance-->
+                                </div>                    
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                        <div class="row downloads-help-links text-center">
+                            <sup class="color-primary-1">*</sup><a class="color-primary-1 text-underline" target="_blank" href="https://docs.anaconda.com/anaconda/faq#how-do-i-get-the-latest-anaconda-with-python-3-5" rel="noopener">How to get Python 3.5 or other Python versions</a>
+                            <br />
+                            <a class="color-primary-1 text-underline" target="_blank" href="https://docs.anaconda.com/anaconda/install/linux" rel="noopener">How to Install ANACONDA</a>
+                        </div><!-- .row -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+
+                </div><!-- .container -->
+            </div><!-- .tab-content -->
+            </li>
+            
+        </ul>
+    </div><!-- .tabs-container -->
+    
+</section>
+
+<section id="get-started" class="space-sm unpad-bottom">
+<div class="container">
+    <div class="row">
+    <h2 class="text-center text-normal">Get Started</h2>
+    </div><!-- .row -->
+    <div class="row">
+
+        <div class="col-sm-4">                            
+            <div class="boxed boxed-border text-center">
+                <h5 class="text-bolder unmarg">
+                    <a href="https://docs.anaconda.com/anaconda/" target="_blank" rel="noopener">
+                     <i class="icon icon-lg ana ana-documentation color-dark block scale-85" style="margin-bottom: 20px;"></i>
+                     <span class="color-primary">Anaconda Documentation</span>
+                    </a>
+                </h5>
+            </div>                            
+        </div><!-- .col -->
+
+        <div class="col-sm-4">                            
+            <div class="boxed boxed-border text-center">
+                <h5 class="text-bolder unmarg">
+                    <a href="https://docs.anaconda.com/anaconda/navigator/" target="_blank" rel="noopener">
+                     <i class="icon icon-lg ana ana-navigator color-dark block scale-85" style="margin-bottom: 20px;"></i>
+                     <span class="color-primary">How to Use Anaconda Navigator</span>
+                    </a>
+                </h5>
+            </div>                            
+        </div><!-- .col -->
+
+        <div class="col-sm-4">                            
+            <div class="boxed boxed-border text-center">
+                <h5 class="text-bolder unmarg">
+                    <a href="https://docs.anaconda.com/anaconda/pkg-docs" target="_blank" rel="noopener">
+                     <i class="icon icon-lg ana ana-package color-dark block scale-85" style="margin-bottom: 20px;"></i>
+                     <span class="color-primary">Packages Included in Anaconda</span>
+                    </a>
+                </h5>
+            </div>                            
+        </div><!-- .col -->
+
+        <div class="col-sm-4">                            
+            <div class="boxed boxed-border text-center">
+                <h5 class="text-bolder unmarg">
+                    <a href="https://conda.io/docs/test-drive.html" target="_blank" rel="noopener">
+                     <i class="icon icon-lg ana ana-command-line color-dark block scale-85" style="margin-bottom: 20px;"></i>
+                     <span class="color-primary">Try Out Conda</span>
+                    </a>
+                </h5>
+            </div>                            
+        </div><!-- .col -->
+
+        <div class="col-sm-4">                            
+            <div class="boxed boxed-border text-center">
+                <h5 class="text-bolder unmarg">
+                    <a href="https://www.anaconda.com/support/" target="_blank" rel="noopener">
+                     <i class="icon icon-lg ana ana-support color-dark block scale-85" style="margin-bottom: 20px;"></i>
+                     <span class="color-primary">Support</span>
+                    </a>
+                </h5>
+            </div>                            
+        </div><!-- .col -->
+
+        <div class="col-sm-4">                            
+            <div class="boxed boxed-border text-center">
+                <h5 class="text-bolder unmarg">
+                    <a href="https://www.datacamp.com/learn-python-with-anaconda?utm_source=Anaconda_download&utm_campaign=datacamp_training&utm_medium=banner" target="_blank" rel="noopener">
+                     <i class="icon icon-lg ana ana-datacamp color-dark block scale-85" style="margin-bottom: 20px;"></i>
+                     <span class="color-primary">Learn Python with Anaconda</span>
+                    </a>
+                </h5>
+            </div>                            
+        </div><!-- .col -->
+
+    </div><!-- .row -->
+</div><!-- .container -->
+</section>
+
+<section class="cta cta-4 space-xxs">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <span class="color-primary">Anaconda</span> is BSD licensed, which gives you permission to use Anaconda commercially and for redistribution.
+            </div>
+        </div><!-- .row -->
+    </div><!-- .container -->
+</section>
+
+<section class="bg-secondary unpad">
+<div class="cta cta-1 cta-horizontal text-center-xs">
+    <div class="col-md-3 col-md-offset-1">
+        <h4>Anaconda Webinars</h4>
+    </div>
+    <div class="col-md-5">
+        <p class="lead__">
+            See upcoming and previous webinars from the experts
+        </p>
+    </div>
+    <div class="col-md-3 text-center">
+         <a class="btn btn-primary text-uppercase___" href="https://www.anaconda.com/blog/developer-blog/webinars/">
+             <span class="btn-text btn-sm">
+                 View Now
+             </span>
+         </a>
+    </div>
+</div>
+</section>    
+    
+<div class="meta-block hidden" style="display: none;"><span class="entry-title">Downloads</span></div>
+
+<div class="meta-block hidden" style="display: none;"><span class="date updated">2018-03-17 08:44:16</span></div>
+
+<div class="meta-block hidden" style="display: none;">
+<span class="vcard author author_name"><span class="fn"><a href="https://www.anaconda.com/download/">Anaconda</a></span></span></div>
+
+<div class="meta-block hidden" style="display: none;">
+<ul class="post-categories"><li id="-1" class="cat-page"><a href="https://www.anaconda.com/download/" rel="tag">Page</a></li></ul></div>
+
+    
+  </div><!-- .fullpage-content -->
+  
+
+</div><!-- .wrapper -->
+	
+		<footer id="footer-top" class="footer-2 bg-dark">
+      <div class="container">
+        
+        <div class="row unmarg-top">
+            
+                        
+            <div class="col-md-7 col-md-offset-5 col-sm-12 col-xs-12 text-right text-left-sm">
+              <form class="search" method="get" action="https://www.anaconda.com" role="search">
+  <section class="space-xs clearfix">
+    <div class="col-sm-8 col-sm-offset-2">
+      <div class="row">
+          <div class="col-sm-10">
+              <input type="search" name="s" placeholder="I'm looking for&hellip;" autocomplete="off" value="" />
+          </div><!-- .col -->
+          <div class="col-sm-2">
+            <button type="submit" class="btn btn-primary" style="width: auto; height: auto; padding: 8px 32px;">Search</button>
+        </div><!-- .col -->
+      </div><!-- .row -->
+    </div><!-- .col -->          
+  </section>
+</form>
+            </div>
+            
+          </div><!-- .row-->
+
+      </div><!-- .container -->
+    </footer>
+          
+	<footer id="footer-bottom" class="space-xs footer-2 bg-dark unpad-bottom">
+        <div class="container">
+          
+          <div class="row">
+              
+                              
+            
+                            
+                <div class="footer-column col-md-6 col-lg-3">
+                    <h4 class="text-bold">Products</h4>
+                    <ul class="list-hover mt-1">
+                        <li>
+                            <a href="https://www.anaconda.com/distribution/">
+                              Anaconda Distribution                          </a>
+                        </li>
+                        <li>
+                            <a href="https://www.anaconda.com/enterprise/">
+                              Anaconda Enterprise                          </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-column col-md-6 col-lg-3">
+                    <h4 class="text-bold">Explore</h4>
+                    <ul class="list-hover">
+                        <li>
+                            <a href="https://docs.anaconda.com/">
+                              Documentation                          </a>
+                        </li>
+                        <li>
+                            <a href="https://www.anaconda.com/blog/developer-blog">
+                              Developer Blog                          </a>
+                        </li>
+                        <li>
+                            <a href="https://www.anaconda.com/download/">
+                              Download Anaconda                          </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column col-md-6 col-lg-3">
+                    <h4 class="text-bold">Learn</h4>
+                    <ul class="list-hover">
+                        <li>
+                            <a href="https://www.anaconda.com/blog/developer-blog/webinars/">
+                              Webinars                          </a>
+                        </li>
+                        <li>
+                            <a href="https://www.anaconda.com/whitepapers">
+                              Whitepapers & eBooks                          </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-column contact-numbers col-md-6 col-lg-3">
+                    <h4 class="text-uppercase___">
+                      <a href="https://www.anaconda.com/contact-us" class="text-bold opacity-100">
+                        Contact Us                      </a>
+                    </h4>
+                    <ul class="list-hover">
+                        							  <li>
+								  <h4 class="text-uppercase___">
+									<a href="tel:1-512-222-5440" class="text-bold opacity-100">
+									  Phone main:&nbsp; +1 (512) 222-5440									</a>
+								  </h4>
+							  </li>
+							  							  <li>
+								  <h4 class="text-uppercase___">
+									<a href="tel:1-512-776-1066" class="text-bold opacity-100">
+									  Phone sales:&nbsp; +1 (512) 776-1066									</a>
+								  </h4>
+							  </li>
+							                      </ul>
+                </div>
+            </div><!-- .row-->
+          
+            <div id="footer-copyright" class="row">
+                <div class="col-sm-12">
+                                    <div id="column-copyright">
+                      <span class="text-fine-print opacity-100">
+                         &copy; Copyright 
+                        2018 
+                        Anaconda, Inc.                        All Rights Reserved.                                                </span>
+                      <a class="text-fine-print opacity-100" href="https://www.anaconda.com/privacy-policy">
+                        <span class="sep">|</span>
+                        Privacy Policy                      </a>
+                                        </div>
+                  
+                                    <div id="column-social">
+                      <ul class="social-list list-inline list-hover">
+                                                  
+                                                              <li>
+                                        <a href="https://twitter.com/anacondainc" target="_blank" data-tooltip="Follow us on Twitter">
+                                            <i class="ana ana-social-twitter icon icon-sm"></i>
+                                        </a>
+                                    </li>
+                                                                        <li>
+                                        <a href="https://www.facebook.com/anacondainc" target="_blank" data-tooltip="Find us on Facebook">
+                                            <i class="ana ana-social-facebook icon icon-sm"></i>
+                                        </a>
+                                    </li>
+                                                                        <li>
+                                        <a href="http://www.slideshare.net/continuumio" target="_blank" data-tooltip="Follow us on Slideshare">
+                                            <i class="ana ana-social-slideshare icon icon-sm"></i>
+                                        </a>
+                                    </li>
+                                                                        <li>
+                                        <a href="https://www.linkedin.com/company/anacondainc" target="_blank" data-tooltip="Find us on LinkedIn">
+                                            <i class="ana ana-social-linkedin icon icon-sm"></i>
+                                        </a>
+                                    </li>
+                                                                        <li>
+                                        <a href="https://instagram.com/anaconda_inc" target="_blank" data-tooltip="Follow us on Instagram">
+                                            <i class="ana ana-social-instagram icon icon-sm"></i>
+                                        </a>
+                                    </li>
+                                                                        <li>
+                                        <a href="https://www.youtube.com/c/ContinuumIo" target="_blank" data-tooltip="Watch us on Youtube">
+                                            <i class="ana ana-social-youtube icon icon-sm"></i>
+                                        </a>
+                                    </li>
+                                                                        <li>
+                                        <a href="https://github.com/ContinuumIO" target="_blank" data-tooltip="Follow us on Github">
+                                            <i class="ana ana-social-github icon icon-sm"></i>
+                                        </a>
+                                    </li>
+                                                          </ul>
+                  </div>
+                  
+                </div><!-- .col -->
+              
+            </div><!-- .row-->
+        </div><!-- .container-->
+    </footer>
+
+</main><!-- .main-container -->
+
+<a class="back-to-top inner-link" href="#top" data-scroll-class="150vh:active">
+    <i class="ana ana-chevron-up anaconda-up-open-big"></i>
+</a>
+
+<script type='text/javascript' src='https://www.anaconda.com/wp-content/uploads/anaconda-main.js'></script>
+<script type='text/javascript' src='https://www.anaconda.com/wp-includes/js/wp-embed.min.js'></script>
+	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"2df4399ead","applicationID":"32185581","transactionName":"YAZWMEtUD0oDUE1dXFlMdQdNXA5XTUNYU1YaBUEIVQ==","queueTime":0,"applicationTime":154,"atts":"TEFVRgNOHEQ=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
