@@ -1,0 +1,1 @@
+export GOOGLE_APPLICATION_CREDENTIALS=codespace-dbec9-firebase-adminsdk-b6rtr-9809b48079.json

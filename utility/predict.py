@@ -1,33 +1,43 @@
 import face_recognition
 import cv2
 import numpy as np
-import env
 from motor import MotorClient
 
-db = MotorClient(env.py)['projectx']
 
-def compare(img1, img2):
-    known_encoding = face_recognition.face_encodings(img1)[0]
-    unknown_encoding = face_recognition.face_encodings(img2)[0]
+db = MotorClient("mongodb://user:pass@ds143030.mlab.com:43030/projectx")['projectx']
 
-    results = 1-face_recognition.face_distance([known_encoding], unknown_encoding)
+def compare(known_encoding, unknown_encoding):
+    # unknown_encoding = face_recognition.face_encodings(img2)[0]
 
+    results = 1 - face_recognition.face_distance([known_encoding], unknown_encoding)
     return results
 
 
-def predict(img1):
-    cursor = db.orphan_image.find()
-    max_score = 0.4
-    img_hash = None
-    while(yield cursor.fetch_next):
+async def predict(img2):
+    # img1 = face_recognition.load_image_file('current.jpeg')
+    img2_encoded = face_recognition.face_encodings(np.array(img2))[0]
+
+    cursor = db['image_encodings'].find()
+    max_score = 0.6
+    img_label = None
+    found = False
+    while(await cursor.fetch_next):
         data = cursor.next_object()
 
-        img2 = data["img"]
+        img1_encoded = np.array(data["Image"][1:-1].split()).astype('float32')
 
-        score = compare(img1, img2)
+        score = compare(img1_encoded, img2_encoded)
 
         if score[0] > max_score:
             max_score = score[0]
-            img_hash = data["img_hash"]
+            img_label = data["Labels"]
+            found = True
 
-    return img_hash, max_score
+    return {
+        'found': found,
+        'img_label': img_label,
+        'max_score': max_score
+    }
+
+if __name__ == "__main__":
+    utility.predict.predict(BytesIO(file_body))
