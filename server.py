@@ -117,4 +117,5 @@ if __name__ == "__main__":
     )
     http_server = tornado.httpserver.HTTPServer(app)
     http_server.listen(os.environ.get("PORT", options.port))
+    print('listening on 8000')
     tornado.ioloop.IOLoop.instance().start()
