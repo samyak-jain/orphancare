@@ -1,5 +1,5 @@
 FROM python:3.5-slim
-
+RUN eval $(minikube docker-env)
 EXPOSE 8000
 
 
