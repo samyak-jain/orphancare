@@ -13,7 +13,7 @@ function addDetails(name, district, age, image, orphanName) {
 }
 
 function getDetail(name) {
-  return contract.getDetail(name);
+  return contract.getDetail.call('name');
 }
 
 module.exports = {
@@ -21,5 +21,5 @@ module.exports = {
   getDetail: getDetail
 };
 
-// addDetails('test', 'test district', 8, 'etst image', 'test orphan');
-// console.log(getDetail('test'));
+// console.log(addDetails('test', 'test district', 8, 'etst image', 'test orphan'));
+console.log(getDetail('test'));
