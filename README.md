@@ -56,8 +56,9 @@ The proposed design is an Progressive Web App that runs on all platforms irrespe
 5. This information is also secured using a blockchain architecture that provides security for this sensitive data.
 
 <p align="center">
-  <img src="./Images/location.png" height=350 width=450>
+  <img src="./Images/location.png" height=350 width=550>
   <img src="./Images/email_notification.png" height=350>
+  <br>
   <i><b>Figure:</b> Email notification with location</i>
 </p>
 
