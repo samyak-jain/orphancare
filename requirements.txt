@@ -6,7 +6,7 @@ tornado==4.5.3
 Pillow==5.0.0
 face_recognition==1.2.1
 protobuf==3.5.2.post1
-scipy==1.0.0
+scipy==1.10.0
 google-cloud-core==0.28.0
 google-cloud-firestore==0.28.0
 google-cloud-storage==1.7.0
